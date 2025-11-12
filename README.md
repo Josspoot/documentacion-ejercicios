@@ -97,12 +97,12 @@ $$
 2 & -1 \\
 3 & 4 \\
 \end{pmatrix}
--
+\; - \;
 \begin{pmatrix}
 5 & 2 \\
 -1 & 3 \\
 \end{pmatrix}
-$$  
+$$
 
 $$
 2A =
@@ -110,25 +110,26 @@ $$
 4 & -2 \\
 6 & 8 \\
 \end{pmatrix}
-$$  
+$$
 
 $$
 2A - B =
 \begin{pmatrix}
-4 & -2 \\
-6 & 8 \\
+4 , -2 \\
+6 , 8 \\
 \end{pmatrix}
--
+\; - \;
 \begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
+5 , 2 \\
+-1 , 3 \\
 \end{pmatrix}
 =
 \begin{pmatrix}
--1 & -4 \\
-7 & 5 \\
+-1 , -4 \\
+7 , 5 \\
 \end{pmatrix}
-$$  
+$$
+
 ---
 
 ### c) Producto \( AB \)
