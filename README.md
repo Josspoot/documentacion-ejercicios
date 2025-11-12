@@ -94,9 +94,6 @@ $$
 $$
 2A - B =
 \begin{pmatrix}
-2 \\
-\end{pmatrix}
-\begin{pmatrix}
 2 & -1 \\
 3 & 4 \\
 \end{pmatrix}
