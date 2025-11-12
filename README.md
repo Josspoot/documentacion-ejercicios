@@ -93,41 +93,41 @@ $$
 
 $$
 2A - B =
-2\begin{bmatrix}
+2\begin{pmatrix}
 2 & -1 \\
 3 & 4
-\end{bmatrix}
+\end{pmatrix}
 -
-\begin{bmatrix}
+\begin{pmatrix}
 5 & 2 \\
 -1 & 3
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 $$
 2A =
-\begin{bmatrix}
+\begin{pmatrix}
 4 & -2 \\
 6 & 8
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 $$
 2A - B =
-\begin{bmatrix}
+\begin{pmatrix}
 4 & -2 \\
 6 & 8
-\end{bmatrix}
+\end{pmatrix}
 -
-\begin{bmatrix}
+\begin{pmatrix}
 5 & 2 \\
 -1 & 3
-\end{bmatrix}
+\end{pmatrix}
 =
-\begin{bmatrix}
+\begin{pmatrix}
 -1 & -4 \\
 7 & 5
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 
