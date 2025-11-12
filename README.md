@@ -90,35 +90,48 @@ $$
 ---
 
 ### b) Operación \( 2A - B \)
-$$ 
-2A - B = 2
-\begin{pmatrix} 
-2 & -1 \\ 
-3 & 4 \\ 
+
+$$
+\text{Operación } (2A - B) \\
+\begin{align*}
+2A - B &= 
+2\begin{pmatrix}
+2 & -1 \\
+3 & 4
+\end{pmatrix}
+-
+\begin{pmatrix}
+5 & 2 \\
+-1 & 3
 \end{pmatrix} 
--\begin{pmatrix} 
-5 & 2 \\ 
--1 & 3 \\ 
-\end{pmatrix} 
-$$ 
-$$ 
-2A = \begin{pmatrix} 
-4 & -2 \\ 
-6 & 8 \\ 
-\end{pmatrix} 
-$$ 
-$$ 2A - B = \begin{pmatrix} 
-4 & -2 \\ 
-6 & 8 \\ 
-\end{pmatrix} 
--\begin{pmatrix} 
-5 & 2 \\ 
--1 & 3 \\ 
-\end{pmatrix} 
-=\begin{pmatrix} 
--1 & -4 \\ 
-7 & 5 \\ 
-\end{pmatrix} 
+\quad &\text{(Sustitución)} \\
+\\
+&= 
+\begin{pmatrix}
+4 & -2 \\
+6 & 8
+\end{pmatrix}
+-
+\begin{pmatrix}
+5 & 2 \\
+-1 & 3
+\end{pmatrix}
+\quad &\text{(Cálculo de } 2A\text{)} \\
+\\
+&=
+\begin{pmatrix}
+4-5 & -2-2 \\
+6-(-1) & 8-3
+\end{pmatrix}
+\quad &\text{(Resta de elementos)} \\
+\\
+&=
+\begin{pmatrix}
+-1 & -4 \\
+7 & 5
+\end{pmatrix}
+\quad &\text{(Resultado final)}
+\end{align*}
 $$
 
 
@@ -199,13 +212,112 @@ A^T =
 $$  
 
 
-
-
-
-
-
-
 ---
+
+# EJERCICIO 3: Multiplicacion de cadena
+ 
+### matrices:
+
+$$ A =
+\begin{pmatrix}
+1 & 2 \\
+3 & 4 \\
+\end{pmatrix}
+$$
+
+$$ B =
+\begin{pmatrix}
+2 & 0 \\
+1 & 3 \\
+\end{pmatrix}
+$$
+
+$$ C =
+\begin{pmatrix}
+1 & 1 \\
+0 & 2 \\
+\end{pmatrix}
+$$
+
+Verifica que (AB)C = A(BC)
+
+(AB)C
+
+$$ AB =
+\begin{pmatrix}
+2 & 0 \\
+2 & 6 \\
+---- & ---- \\
+6 & 0 \\
+4 & 12 \\
+\end{pmatrix}
+$$
+
+$$ AB =
+\begin{pmatrix}
+4 & 6 \\
+10 & 12 \\
+\end{pmatrix}
+$$
+
+$$ (AB)C =
+\begin{pmatrix}
+4 & 4 \\
+0 & 12 \\
+---- & ---- \\
+10 & 10 \\
+0 & 24 \\
+\end{pmatrix}
+$$
+
+$$ (AB)C =
+\begin{pmatrix}
+4 & 16 \\
+10 & 34 \\
+\end{pmatrix}
+$$
+
+A(BC)
+
+$$ BC =
+\begin{pmatrix}
+2 & 2 \\
+0 & 0 \\
+---- & ---- \\
+1 & 1 \\
+0 & 6 \\
+\end{pmatrix}
+$$
+
+$$ BC =
+\begin{pmatrix}
+2 & 2 \\
+1 & 7 \\
+\end{pmatrix}
+$$
+
+$$ a(BC) =
+\begin{pmatrix}
+2 & 2 \\
+2 & 14 \\
+---- & ---- \\
+6 & 6 \\
+4 & 28 \\
+\end{pmatrix}
+$$
+
+$$ A(BC) =
+\begin{pmatrix}
+4 & 16 \\
+10 & 34 \\
+\end{pmatrix}
+$$
+
+(AB)C = A(BC) son iguales
+
+
+
+
 
 
 
