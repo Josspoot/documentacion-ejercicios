@@ -92,7 +92,9 @@ $$
 ### b) Operación \( 2A - B \)
 
 $$
-2A - B =
+\text{Operación } (2A - B) \\
+\begin{align*}
+2A - B &= 
 2\begin{pmatrix}
 2 & -1 \\
 3 & 4
@@ -101,19 +103,10 @@ $$
 \begin{pmatrix}
 5 & 2 \\
 -1 & 3
-\end{pmatrix}
-$$
-
-$$
-2A =
-\begin{pmatrix}
-4 & -2 \\
-6 & 8
-\end{pmatrix}
-$$
-
-$$
-2A - B =
+\end{pmatrix} 
+\quad &\text{(Sustitución)} \\
+\\
+&= 
 \begin{pmatrix}
 4 & -2 \\
 6 & 8
@@ -123,13 +116,23 @@ $$
 5 & 2 \\
 -1 & 3
 \end{pmatrix}
-=
+\quad &\text{(Cálculo de } 2A\text{)} \\
+\\
+&=
+\begin{pmatrix}
+4-5 & -2-2 \\
+6-(-1) & 8-3
+\end{pmatrix}
+\quad &\text{(Resta de elementos)} \\
+\\
+&=
 \begin{pmatrix}
 -1 & -4 \\
 7 & 5
 \end{pmatrix}
+\quad &\text{(Resultado final)}
+\end{align*}
 $$
-
 
 
 ---
