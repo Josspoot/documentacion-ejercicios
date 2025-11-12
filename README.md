@@ -92,53 +92,44 @@ $$
 ### b) Operación \( 2A - B \)
 
 $$
-2A - B = 
-2\begin{pmatrix}
+2A - B =
+2\begin{bmatrix}
 2 & -1 \\
 3 & 4
-\end{pmatrix}
+\end{bmatrix}
 -
-\begin{pmatrix}
+\begin{bmatrix}
 5 & 2 \\
 -1 & 3
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 2A =
-\begin{pmatrix}
-2 \cdot 2 & 2 \cdot (-1) \\
-2 \cdot 3 & 2 \cdot 4
-\end{pmatrix}
-=
-\begin{pmatrix}
+\begin{bmatrix}
 4 & -2 \\
 6 & 8
-\end{pmatrix}
+\end{bmatrix}
 $$
 
 $$
 2A - B =
-\begin{pmatrix}
+\begin{bmatrix}
 4 & -2 \\
 6 & 8
-\end{pmatrix}
+\end{bmatrix}
 -
-\begin{pmatrix}
+\begin{bmatrix}
 5 & 2 \\
 -1 & 3
-\end{pmatrix}
+\end{bmatrix}
 =
-\begin{pmatrix}
-4-5 & -2-2 \\
-6-(-1) & 8-3
-\end{pmatrix}
-=
-\begin{pmatrix}
+\begin{bmatrix}
 -1 & -4 \\
 7 & 5
-\end{pmatrix}
+\end{bmatrix}
 $$
+
 
 
 ---
