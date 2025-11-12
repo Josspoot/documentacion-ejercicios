@@ -92,9 +92,11 @@ $$
 ### b) Operación \( 2A - B \)
 
 $$
-$$
 2A - B =
-2 \begin{pmatrix}
+\begin{pmatrix}
+2
+\end{pmatrix}
+\begin{pmatrix}
 2 & -1 \\
 3 & 4 \\
 \end{pmatrix}
@@ -130,7 +132,7 @@ $$
 7 & 5 \\
 \end{pmatrix}
 $$
-$$
+
 
 ---
 
