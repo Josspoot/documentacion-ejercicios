@@ -94,7 +94,7 @@ $$
 $$
 2A - B =
 \begin{pmatrix}
-2
+2 \\
 \end{pmatrix}
 \begin{pmatrix}
 2 & -1 \\
