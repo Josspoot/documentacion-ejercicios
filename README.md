@@ -5,7 +5,8 @@
 ## Actividad \#16 - Matrices doc
 
 ---
-### Identificación de matrices
+### === Comentarios dentro del README ===
+### Identificación de matrices 
 <!-- Se identifican distintos tipos de matrices según sus propiedades -->
 **Matriz identidad**, porque la diagonal está compuesta solo por unos y los demás elementos son ceros.  
 
