@@ -93,7 +93,7 @@ $$
 
 $$
 2A - B =
-\begin{pmatrix}
+2\begin{pmatrix}
 2 & -1 \\
 3 & 4 \\
 \end{pmatrix}
@@ -118,7 +118,7 @@ $$
 4 & -2 \\
 6 & 8 \\
 \end{pmatrix}
-\; - \;
+-
 \begin{pmatrix}
 5 & 2 \\
 -1 & 3 \\
