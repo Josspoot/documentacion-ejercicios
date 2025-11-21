@@ -5,316 +5,211 @@
 ## Actividad \#16 - Matrices doc
 
 ---
-### === Comentarios dentro del README ===
-### Identificación de matrices 
-<!-- Se identifican distintos tipos de matrices según sus propiedades -->
-**Matriz identidad**, porque la diagonal está compuesta solo por unos y los demás elementos son ceros.  
-
-$$        
-A =
-\begin{pmatrix}
-1 & 0 \\
-0 & 1 \\
-\end{pmatrix}
-$$  
-
-**Matriz diagonal**, porque solo los elementos de la diagonal principal son diferentes de cero.  
-
-$$
-B =
-\begin{pmatrix}
-3 & 0 & 0 \\
-0 & -2 & 0 \\
-0 & 0 & 5 \\
-\end{pmatrix}
-$$  
-
-**Matriz simétrica**, porque es igual a su transpuesta, es decir, \( A = A^T \).  
-
-$$
-C =
-\begin{pmatrix}
-2 & 1 & 4 \\
-1 & 3 & 5 \\
-4 & 5 & 6 \\
-\end{pmatrix}
-$$  
-
-**Matriz triangular superior**, porque todos los elementos debajo de la diagonal son ceros.  
-
-$$
-D =
-\begin{pmatrix}
-1 & 2 & 3 \\
-0 & 4 & 5 \\
-0 & 0 & 6 \\
-\end{pmatrix}
-$$  
-
----
-### Ejercicio 2  
-<!-- Se declaran las matrices A y B con las que se harán operaciones -->
-$$
-A =
-\begin{pmatrix}
-2 & -1 \\
-3 & 4 \\
-\end{pmatrix},
-\quad
-B =
-\begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
-\end{pmatrix}
-$$  
+## Objetivo de la Documentación
+Registrar y explicar los ejercicios realizados sobre el cálculo de determinantes de matrices usando diferentes métodos.
 
 ---
 
-### a) Suma de matrices \( A + B \)
-<!-- Se realiza la suma elemento a elemento -->
-$$
-A + B =
-\begin{pmatrix}
-2 + 5 & -1 + 2 \\
-3 + (-1) & 4 + 3 \\
-\end{pmatrix}
-$$  
-
-$$
-A + B =
-\begin{pmatrix}
-7 & 1 \\
-2 & 7 \\
-\end{pmatrix}
-$$  
+## Ejercicios Realizados
 
 ---
 
-### b) Operación \( 2A - B \)
-<!-- Se multiplica la matriz A por 2 y luego se le resta la matriz B -->
-$$ 
-2A - B = 2
-\begin{pmatrix} 
-2 & -1 \\ 
-3 & 4 \\ 
-\end{pmatrix} 
--\begin{pmatrix} 
-5 & 2 \\ 
--1 & 3 \\ 
-\end{pmatrix} 
-$$ 
-<!-- Aquí se calcula 2A -->
-$$ 
-2A = \begin{pmatrix} 
-4 & -2 \\ 
-6 & 8 \\ 
-\end{pmatrix} 
-$$ 
-<!-- Finalmente se resta 2A - B -->
-$$ 2A - B = \begin{pmatrix} 
-4 & -2 \\ 
-6 & 8 \\ 
-\end{pmatrix} 
--\begin{pmatrix} 
-5 & 2 \\ 
--1 & 3 \\ 
-\end{pmatrix} 
-=\begin{pmatrix} 
--1 & -4 \\ 
-7 & 5 \\ 
-\end{pmatrix} 
-$$
+## Ejercicio 1: Cálculo de Determinantes 
+
+### Enunciado del Problema
+Calcular los determinantes de las siguientes matrices:
+
+```math
+A = \begin{pmatrix} 5 & 2 \\ 3 & 1 \end{pmatrix},\quad
+B = \begin{pmatrix} -1 & 4 \\ 2 & -8 \end{pmatrix},\quad
+C = \begin{pmatrix} 6 & 9 \\ 2 & 3 \end{pmatrix},\quad
+D = \begin{pmatrix} 0 & 5 \\ -5 & 0 \end{pmatrix}
+```
+
+### Respuesta
+- **det(A) = –1**  
+- **det(B) = 0**  
+- **det(C) = 0**  
+- **det(D) = 25**
+
+### Procedimiento
+
+1. **Matriz A:**  
+   `det(A) = (5·1) – (2·3) = 5 – 6 = –1`
+2. **Matriz B:**  
+   `det(B) = (–1·–8) – (4·2) = 8 – 8 = 0`
+3. **Matriz C:**  
+   `det(C) = (6·3) – (9·2) = 18 – 18 = 0`
+4. **Matriz D:**  
+   `det(D) = (0·0) – (5·–5) = 0 – (–25) = 25`
 
 ---
 
-### c) Producto \( AB \)
-<!-- Se realiza la multiplicación de A por B aplicando la regla fila x columna -->
-$$
-AB =
-\begin{pmatrix}
-2 & -1 \\
-3 & 4 \\
-\end{pmatrix}
-\begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
-\end{pmatrix}
-$$  
+## Ejercicio 2: Determinante de Matriz:
 
-<!-- Se desarrolla el cálculo de cada posición de la matriz -->
-$$
-AB =
-\begin{pmatrix}
-(2)(5)+ (-1)(-1) | & (2)(2)+ (-1)(3) \\
-(3)(5)+ (4)(-1) | & (3)(2)+ (4)(3) \\
-\end{pmatrix}
-$$  
+### Enunciado del Problema
 
-<!-- Resultado final del producto AB -->
-$$
-AB =
-\begin{pmatrix}
-11 & 1 \\
-11 & 18 \\
+```math
+F = \begin{pmatrix}
+2 & -1 & 3 \\
+1 & 4 & 0 \\
+3 & 2 & -2
 \end{pmatrix}
-$$
+```
+
+### Respuesta
+- **det(F) = –51**
+
+### Procedimiento
+Método aplicado: **Regla de Sarrus o expansión por cofactores**.
+
+```math
+-38 - 13 = -51
+```
 
 ---
 
-### d) Producto \( BA \)
-<!-- Ahora se invierte el orden de multiplicación para comparar resultados -->
-$$
-BA =
-\begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
-\end{pmatrix}
-\begin{pmatrix}
-2 & -1 \\
-3 & 4 \\
-\end{pmatrix}
-$$  
+## Ejercicio 3: Método de Cofactores para Determinantes 
 
-<!-- Se desarrolla el cálculo de cada posición -->
-$$
-BA =
-\begin{pmatrix}
-(5)(2)+ (2)(3) | & (5)(-1)+ (2)(4) \\
-(-1)(2)+ (3)(3) | & (-1)(-1)+ (3)(4) \\
-\end{pmatrix}
-$$  
+### Enunciado del Problema
 
-<!-- Resultado final del producto BA -->
-$$
-BA =
-\begin{pmatrix}
-16 & 3 \\
-7 & 13 \\
+```math
+G = \begin{pmatrix}
+1 & 0 & 2 \\
+-1 & 3 & 1 \\
+2 & 0 & 1
 \end{pmatrix}
-$$ 
+```
+
+### Respuesta
+- **det(G) = –9**
+
+### Procedimiento
+
+#### Expansión por cofactores (primera fila)
+
+- **Término 1 (G₁₁):**  
+  `G₁₁ = 1`  
+  Signo: **+**  
+  Menor:
+
+  ```math
+  M_{11} = \det\begin{pmatrix} 3 & 1 \\ 0 & 1 \end{pmatrix}
+  = 3
+  ```
+
+  Término: `(1)(3) = 3`
+
+- **Término 2 (G₁₂):**  
+  `G₁₂ = 0`  
+  → Término = **0**
+
+- **Término 3 (G₁₃):**  
+  `G₁₃ = 2`  
+  Signo: **+**  
+  Menor:
+
+  ```math
+  M_{13} = \det\begin{pmatrix} -1 & 3 \\ 2 & 0 \end{pmatrix}
+  = - (3·2) = -6
+  ```
+
+  Término: `(2)(–6) = –12`
+
+#### Resultado final
+
+```math
+\det(G) = 3 + 0 - 12 = -9
+```
 
 ---
 
-### e) Transpuesta de \( A \)
-<!-- Se intercambian las filas por columnas -->
-$$
-A^T =
-\begin{pmatrix}
-2 & 3 \\
--1 & 4 \\
-\end{pmatrix}
-$$  
+## Ejercicio 4: Propiedades de los Determinantes
+
+### Enunciado del Problema
+
+```math
+A = \begin{pmatrix} 2 & 1 \\ 1 & 3 \end{pmatrix},\quad
+B = \begin{pmatrix} 1 & 2 \\ 3 & 1 \end{pmatrix}
+```
+
+### Respuesta 
+- **det(A) = 5**  
+- **det(B) = –5**  
+- **det(AB) = –25**  
+- **det(Aᵀ) = 5**
+
+### Procedimiento
+
+#### Cálculo de determinantes reales
+
+1. **Determinante de A**
+
+```math
+\det(A) = (2·3) - (1·1) = 6 - 1 = 5
+```
+
+
+2. **Determinante de B**
+
+```math
+\det(B) = (1·1) - (3·2) = - 6 + 1 = - 5
+```
+
+
+#### Verificación de la propiedad  
+`det(AB) = det(A)·det(B)`
+
+
+- `det(AB) = –25`  
+- `det(A)·det(B) = 5(–5) = –25`
+
+**Propiedad verificada** 
+
+#### Verificación de `det(Aᵀ) = det(A)`
+
+- `det(Aᵀ) = 5`  
+- `det(A) = 5`  
+  **Propiedad verificada** 
 
 ---
 
-# EJERCICIO 3: Multiplicación de cadena
-<!-- Se verifica la propiedad asociativa: (AB)C = A(BC) -->
-### matrices:
-<!-- Se definen tres matrices A, B y C -->
-$$ A =
-\begin{pmatrix}
-1 & 2 \\
-3 & 4 \\
-\end{pmatrix}
-$$
+## Ejercicio 5: Área del Paralelogramo
 
-$$ B =
-\begin{pmatrix}
-2 & 0 \\
-1 & 3 \\
-\end{pmatrix}
-$$
+### Enunciado del Problema
+Vectores:
 
-$$ C =
-\begin{pmatrix}
-1 & 1 \\
-0 & 2 \\
-\end{pmatrix}
-$$
+- `U = (3, 2)`  
+- `V = (1, 4)`
 
-<!-- Paso a paso para comprobar la igualdad -->
-Verifica que (AB)C = A(BC)
+### Respuesta
+- **Área = 10**
 
-(AB)C
-<!-- Se multiplica A por B primero -->
-$$ AB =
-\begin{pmatrix}
-2 & 0 \\
-2 & 6 \\
----- & ---- \\
-6 & 0 \\
-4 & 12 \\
-\end{pmatrix}
-$$
+### Procedimiento
 
-<!-- Resultado simplificado de AB -->
-$$ AB =
-\begin{pmatrix}
-4 & 6 \\
-10 & 12 \\
-\end{pmatrix}
-$$
+1. **Matriz formada por los vectores**
 
-<!-- Luego se multiplica el resultado por C -->
-$$ (AB)C =
-\begin{pmatrix}
-4 & 4 \\
-0 & 12 \\
----- & ---- \\
-10 & 10 \\
-0 & 24 \\
-\end{pmatrix}
-$$
+```math
+A = \begin{pmatrix} 3 & 2 \\ 1 & 4 \end{pmatrix}
+```
 
-<!-- Resultado final de (AB)C -->
-$$ (AB)C =
-\begin{pmatrix}
-4 & 16 \\
-10 & 34 \\
-\end{pmatrix}
-$$
+2. **Determinante**
 
-<!-- Se repite el proceso, pero primero B*C -->
-A(BC)
+```math
+\det(A) = 12 - 2 = 10
+```
 
-<!-- Se multiplica B por C -->
-$$ BC =
-\begin{pmatrix}
-2 & 2 \\
-0 & 0 \\
----- & ---- \\
-1 & 1 \\
-0 & 6 \\
-\end{pmatrix}
-$$
+3. **Interpretación geométrica**  
+El valor absoluto del determinante representa el área del paralelogramo.
 
-<!-- Resultado simplificado de BC -->
-$$ BC =
-\begin{pmatrix}
-2 & 2 \\
-1 & 7 \\
-\end{pmatrix}
-$$
+4. **Cambio de orden**
 
-<!-- Se multiplica ahora A por el resultado BC -->
-$$ a(BC) =
-\begin{pmatrix}
-2 & 2 \\
-2 & 14 \\
----- & ---- \\
-6 & 6 \\
-4 & 28 \\
-\end{pmatrix}
-$$
+```math
+\det\begin{pmatrix} 1 & 4 \\ 3 & 2 \end{pmatrix}
+= 2 - 12 = -10
+```
 
-<!-- Resultado final de A(BC) -->
-$$ A(BC) =
-\begin{pmatrix}
-4 & 16 \\
-10 & 34 \\
-\end{pmatrix}
-$$
+Área = `|–10| = 10`
 
-<!-- Conclusión: se verifica que son iguales -->
-(AB)C = A(BC) son iguales
+---
 
