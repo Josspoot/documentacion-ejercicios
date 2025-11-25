@@ -3,6 +3,11 @@
 ## Materia: Fundamentos de álgebra
 ## Alumno: Poot Mateo Josué Enmanuel
 ## Actividad \#20 - documentacion
+## Objetivo de la Documentación
+
+El objetivo de esta documentacion es aprender a usar la plataforma de GitHub y las matrices de modo que podamos realizar imagenes por medio de matrices, de igual modo podemos representar y "jugar" con ellas de modo que logremos replicr imagenes sombreadas, giradas, invertidas y otros mas...
+--- 
+## Ejercicios Realizados:
 
 ---
 
