@@ -34,12 +34,12 @@ A =
 \qquad
 \mathbf{x} =
 \begin{pmatrix}
-x\\y\\z
+x, y, z
 \end{pmatrix},
 \qquad
 \mathbf{b} =
 \begin{pmatrix}
-6\\3\\2
+6, 3, 2
 \end{pmatrix},
 \qquad
 A\mathbf{x} = \mathbf{b}.
@@ -90,7 +90,7 @@ R_2 \leftrightarrow R_3
 \right]
 $$
 
-3. Eliminar la \(y\) de la fila 3:
+3. Eliminar la (y) de la fila 3:
 
 $$
 R_3 \leftarrow R_3 + 3R_2
@@ -242,7 +242,7 @@ A^{-1}\mathbf{b}
 5 & -1 & -3
 \end{pmatrix}
 \begin{pmatrix}
-6\\3\\2
+6, 3, 2
 \end{pmatrix}.
 $$
 
@@ -250,7 +250,7 @@ Producto:
 
 $$
 \begin{pmatrix}
-7\\14\\21
+7, 14, 21
 \end{pmatrix}
 $$
 
@@ -259,7 +259,7 @@ Aplicar \(\tfrac{1}{7}\):
 $$
 \mathbf{x}=
 \begin{pmatrix}
-1\\2\\3
+1, 2, 3
 \end{pmatrix}.
 $$
 
@@ -278,7 +278,7 @@ A =
 \end{pmatrix},\quad
 \mathbf{b} =
 \begin{pmatrix}
-6\\3\\2
+6, 3, 2
 \end{pmatrix},
 $$
 
