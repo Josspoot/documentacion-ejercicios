@@ -2,319 +2,512 @@
 # Tecnológico de Software
 ## Materia: Fundamentos de álgebra
 ## Alumno: Poot Mateo Josué Enmanuel
-## Actividad \#16 - Matrices doc
+## Actividad - Gauss y Gauss jordan
 
 ---
-### === Comentarios dentro del README ===
-### Identificación de matrices 
-<!-- Se identifican distintos tipos de matrices según sus propiedades -->
-**Matriz identidad**, porque la diagonal está compuesta solo por unos y los demás elementos son ceros.  
+# Resolución de sistemas de ecuaciones lineales
 
-$$        
-A =
-\begin{pmatrix}
-1 & 0 \\
-0 & 1 \\
-\end{pmatrix}
-$$  
-
-**Matriz diagonal**, porque solo los elementos de la diagonal principal son diferentes de cero.  
-
-$$
-B =
-\begin{pmatrix}
-3 & 0 & 0 \\
-0 & -2 & 0 \\
-0 & 0 & 5 \\
-\end{pmatrix}
-$$  
-
-**Matriz simétrica**, porque es igual a su transpuesta, es decir, \( A = A^T \).  
-
-$$
-C =
-\begin{pmatrix}
-2 & 1 & 4 \\
-1 & 3 & 5 \\
-4 & 5 & 6 \\
-\end{pmatrix}
-$$  
-
-**Matriz triangular superior**, porque todos los elementos debajo de la diagonal son ceros.  
-
-$$
-D =
-\begin{pmatrix}
-1 & 2 & 3 \\
-0 & 4 & 5 \\
-0 & 0 & 6 \\
-\end{pmatrix}
-$$  
+en este documento se encuentra la documentacion de los ejercicios marcados en clase, relacionados a Gauss y Gauss Jordan, estos ejercicios demuestran la forma de dar resolucion a las ecuaciones planteadas 
 
 ---
-### Ejercicio 2  
-<!-- Se declaran las matrices A y B con las que se harán operaciones -->
+
+## Ejercicio 1. Sistema (3x3) con distintos métodos
+sistema
+
+$$
+\begin{cases}
+x + y + z = 6\\
+2x - y + z = 3\\
+x + 2y - z = 2
+\end{cases}
+$$
+
+forma matricial:
+
 $$
 A =
 \begin{pmatrix}
-2 & -1 \\
-3 & 4 \\
+1 & 1 & 1\\
+2 & -1 & 1\\
+1 & 2 & -1
 \end{pmatrix},
-\quad
-B =
+\qquad
+\mathbf{x} =
 \begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
-\end{pmatrix}
-$$  
-
----
-
-### a) Suma de matrices \( A + B \)
-<!-- Se realiza la suma elemento a elemento -->
-$$
-A + B =
+x\\y\\z
+\end{pmatrix},
+\qquad
+\mathbf{b} =
 \begin{pmatrix}
-2 + 5 & -1 + 2 \\
-3 + (-1) & 4 + 3 \\
-\end{pmatrix}
-$$  
-
-$$
-A + B =
-\begin{pmatrix}
-7 & 1 \\
-2 & 7 \\
-\end{pmatrix}
-$$  
-
----
-
-### b) Operación \( 2A - B \)
-<!-- Se multiplica la matriz A por 2 y luego se le resta la matriz B -->
-$$ 
-2A - B = 2
-\begin{pmatrix} 
-2 & -1 \\ 
-3 & 4 \\ 
-\end{pmatrix} 
--\begin{pmatrix} 
-5 & 2 \\ 
--1 & 3 \\ 
-\end{pmatrix} 
-$$ 
-<!-- Aquí se calcula 2A -->
-$$ 
-2A = \begin{pmatrix} 
-4 & -2 \\ 
-6 & 8 \\ 
-\end{pmatrix} 
-$$ 
-<!-- Finalmente se resta 2A - B -->
-$$ 2A - B = \begin{pmatrix} 
-4 & -2 \\ 
-6 & 8 \\ 
-\end{pmatrix} 
--\begin{pmatrix} 
-5 & 2 \\ 
--1 & 3 \\ 
-\end{pmatrix} 
-=\begin{pmatrix} 
--1 & -4 \\ 
-7 & 5 \\ 
-\end{pmatrix} 
+6\\3\\2
+\end{pmatrix},
+\qquad
+A\mathbf{x} = \mathbf{b}.
 $$
 
----
+### Método de Gauss
 
-### c) Producto \( AB \)
-<!-- Se realiza la multiplicación de A por B aplicando la regla fila x columna -->
-$$
-AB =
-\begin{pmatrix}
-2 & -1 \\
-3 & 4 \\
-\end{pmatrix}
-\begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
-\end{pmatrix}
-$$  
 
-<!-- Se desarrolla el cálculo de cada posición de la matriz -->
 $$
-AB =
-\begin{pmatrix}
-(2)(5)+ (-1)(-1) | & (2)(2)+ (-1)(3) \\
-(3)(5)+ (4)(-1) | & (3)(2)+ (4)(3) \\
-\end{pmatrix}
-$$  
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 6\\
+2 & -1 & 1 & 3\\
+1 & 2 & -1 & 2
+\end{array}
+\right]
+$$
 
-<!-- Resultado final del producto AB -->
+1. Eliminar la \(x\) de las filas 2 y 3:
+
 $$
-AB =
-\begin{pmatrix}
-11 & 1 \\
-11 & 18 \\
-\end{pmatrix}
+R_2 \leftarrow R_2 - 2R_1,\quad
+R_3 \leftarrow R_3 - R_1
+$$
+
+$$
+\longrightarrow
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 6\\
+0 & -3 & -1 & -9\\
+0 & 1 & -2 & -4
+\end{array}
+\right]
+$$
+
+2. Intercambio de filas para tener un pivote sencillo en la segunda fila:
+
+$$
+R_2 \leftrightarrow R_3
+\Longrightarrow
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 6\\
+0 & 1 & -2 & -4\\
+0 & -3 & -1 & -9
+\end{array}
+\right]
+$$
+
+3. Eliminar la \(y\) de la fila 3:
+
+$$
+R_3 \leftarrow R_3 + 3R_2
+$$
+
+$$
+\longrightarrow
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 6\\
+0 & 1 & -2 & -4\\
+0 & 0 & -7 & -21
+\end{array}
+\right]
+$$
+
+forma escalonada:
+
+$$
+-7z = -21 \Rightarrow z = 3,
+$$
+
+$$
+y - 2z = -4 \Rightarrow y - 6 = -4 \Rightarrow y = 2,
+$$
+
+$$
+x + y + z = 6 \Rightarrow x + 2 + 3 = 6 \Rightarrow x = 1.
+$$
+
+Por tanto:
+
+$$
+(x,y,z) = (1,2,3).
 $$
 
 ---
 
-### d) Producto \( BA \)
-<!-- Ahora se invierte el orden de multiplicación para comparar resultados -->
-$$
-BA =
-\begin{pmatrix}
-5 & 2 \\
--1 & 3 \\
-\end{pmatrix}
-\begin{pmatrix}
-2 & -1 \\
-3 & 4 \\
-\end{pmatrix}
-$$  
+### Método de Gauss–Jordan
 
-<!-- Se desarrolla el cálculo de cada posición -->
-$$
-BA =
-\begin{pmatrix}
-(5)(2)+ (2)(3) | & (5)(-1)+ (2)(4) \\
-(-1)(2)+ (3)(3) | & (-1)(-1)+ (3)(4) \\
-\end{pmatrix}
-$$  
+matriz escalonada obtenida:
 
-<!-- Resultado final del producto BA -->
 $$
-BA =
-\begin{pmatrix}
-16 & 3 \\
-7 & 13 \\
-\end{pmatrix}
-$$ 
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 6\\
+0 & 1 & -2 & -4\\
+0 & 0 & -7 & -21
+\end{array}
+\right]
+$$
+
+1. 
+
+$$
+R_3 \leftarrow -\frac{1}{7} R_3
+\Longrightarrow
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 1 & 6\\
+0 & 1 & -2 & -4\\
+0 & 0 & 1 & 3
+\end{array}
+\right]
+$$
+
+2. 
+
+$$
+R_2 \leftarrow R_2 + 2R_3,\quad
+R_1 \leftarrow R_1 - R_3
+$$
+
+$$
+\longrightarrow
+\left[
+\begin{array}{ccc|c}
+1 & 1 & 0 & 3\\
+0 & 1 & 0 & 2\\
+0 & 0 & 1 & 3
+\end{array}
+\right]
+$$
+
+3. 
+
+$$
+R_1 \leftarrow R_1 - R_2
+$$
+
+$$
+\Longrightarrow
+\left[
+\begin{array}{ccc|c}
+1 & 0 & 0 & 1\\
+0 & 1 & 0 & 2\\
+0 & 0 & 1 & 3
+\end{array}
+\right]
+$$
+
+respuesta final:
+
+$$
+x = 1,\quad y = 2,\quad z = 3.
+$$
 
 ---
 
-### e) Transpuesta de \( A \)
-<!-- Se intercambian las filas por columnas -->
+### Método de la matriz inversa
+
+
 $$
-A^T =
+A =
 \begin{pmatrix}
-2 & 3 \\
--1 & 4 \\
+1 & 1 & 1\\
+2 & -1 & 1\\
+1 & 2 & -1
+\end{pmatrix}.
+$$
+
+Determinante por Sarrus:
+
+$$
+\det(A) = 1(-1)(-1) + 1(1)(1) + 1(2)(2)
+          - 1(-1)(1) - 1(2)(-1) - 1(1)(2)
+        = 7.
+$$
+
+Como \(\det(A)\neq 0\), la inversa existe:
+
+$$
+A^{-1} = \frac{1}{7}
+\begin{pmatrix}
+-1 & 3 & 2\\
+3 & -2 & 1\\
+5 & -1 & -3
+\end{pmatrix}.
+$$
+
+Multiplicación \(A^{-1}\mathbf{b}\):
+
+$$
+A^{-1}\mathbf{b}
+= \frac{1}{7}
+\begin{pmatrix}
+-1 & 3 & 2\\
+3 & -2 & 1\\
+5 & -1 & -3
 \end{pmatrix}
-$$  
+\begin{pmatrix}
+6\\3\\2
+\end{pmatrix}.
+$$
+
+Producto:
+
+$$
+\begin{pmatrix}
+7\\14\\21
+\end{pmatrix}
+$$
+
+Aplicar \(\tfrac{1}{7}\):
+
+$$
+\mathbf{x}=
+\begin{pmatrix}
+1\\2\\3
+\end{pmatrix}.
+$$
 
 ---
 
-# EJERCICIO 3: Multiplicación de cadena
-<!-- Se verifica la propiedad asociativa: (AB)C = A(BC) -->
-### matrices:
-<!-- Se definen tres matrices A, B y C -->
-$$ A =
+### Regla de Cramer (La fav)
+
+Matrices:
+
+$$
+A =
 \begin{pmatrix}
-1 & 2 \\
-3 & 4 \\
-\end{pmatrix}
+1 & 1 & 1\\
+2 & -1 & 1\\
+1 & 2 & -1
+\end{pmatrix},\quad
+\mathbf{b} =
+\begin{pmatrix}
+6\\3\\2
+\end{pmatrix},
 $$
 
-$$ B =
-\begin{pmatrix}
-2 & 0 \\
-1 & 3 \\
-\end{pmatrix}
+Determinante:
+
+$$
+D = 7
 $$
 
-$$ C =
+Matrices cambiadas:
+
+$$
+A_x =
 \begin{pmatrix}
-1 & 1 \\
-0 & 2 \\
-\end{pmatrix}
+6 & 1 & 1\\
+3 & -1 & 1\\
+2 & 2 & -1
+\end{pmatrix},
 $$
 
-<!-- Paso a paso para comprobar la igualdad -->
-Verifica que (AB)C = A(BC)
-
-(AB)C
-<!-- Se multiplica A por B primero -->
-$$ AB =
+$$
+A_y =
 \begin{pmatrix}
-2 & 0 \\
-2 & 6 \\
----- & ---- \\
-6 & 0 \\
-4 & 12 \\
-\end{pmatrix}
+1 & 6 & 1\\
+2 & 3 & 1\\
+1 & 2 & -1
+\end{pmatrix},
 $$
 
-<!-- Resultado simplificado de AB -->
-$$ AB =
+$$
+A_z =
 \begin{pmatrix}
-4 & 6 \\
-10 & 12 \\
-\end{pmatrix}
+1 & 1 & 6\\
+2 & -1 & 3\\
+1 & 2 & 2
+\end{pmatrix}.
 $$
 
-<!-- Luego se multiplica el resultado por C -->
-$$ (AB)C =
-\begin{pmatrix}
-4 & 4 \\
-0 & 12 \\
----- & ---- \\
-10 & 10 \\
-0 & 24 \\
-\end{pmatrix}
+Determinantes:
+
+$$
+D_x=7,\quad D_y=14,\quad D_z=21
 $$
 
-<!-- Resultado final de (AB)C -->
-$$ (AB)C =
-\begin{pmatrix}
-4 & 16 \\
-10 & 34 \\
-\end{pmatrix}
+Solución:
+
+$$
+x=1,\quad y=2,\quad z=3.
 $$
 
-<!-- Se repite el proceso, pero primero B*C -->
-A(BC)
+---
 
-<!-- Se multiplica B por C -->
-$$ BC =
-\begin{pmatrix}
-2 & 2 \\
-0 & 0 \\
----- & ---- \\
-1 & 1 \\
-0 & 6 \\
-\end{pmatrix}
+## Ejercicio 2. Clasificación de sistemas 
+
+### Sistema (a)
+
+$$
+\begin{cases}
+x + y = 3\\
+2x + 2y = 6
+\end{cases}
 $$
 
-<!-- Resultado simplificado de BC -->
-$$ BC =
-\begin{pmatrix}
-2 & 2 \\
-1 & 7 \\
-\end{pmatrix}
+Matriz aumentada:
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+2 & 2 & 6
+\end{array}
+\right]
 $$
 
-<!-- Se multiplica ahora A por el resultado BC -->
-$$ a(BC) =
-\begin{pmatrix}
-2 & 2 \\
-2 & 14 \\
----- & ---- \\
-6 & 6 \\
-4 & 28 \\
-\end{pmatrix}
+Resultado:
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+0 & 0 & 0
+\end{array}
+\right]
 $$
 
-<!-- Resultado final de A(BC) -->
-$$ A(BC) =
-\begin{pmatrix}
-4 & 16 \\
-10 & 34 \\
-\end{pmatrix}
+ infinitas soluciones.
+
+---
+
+### Sistema (b)
+
+$$
+\begin{cases}
+x + y = 3\\
+2x + 2y = 7
+\end{cases}
 $$
 
-<!-- Conclusión: se verifica que son iguales -->
-(AB)C = A(BC) son iguales
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+2 & 2 & 7
+\end{array}
+\right]
+$$
 
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+0 & 0 & 1
+\end{array}
+\right]
+$$
+
+Sistema sin solución.
+
+---
+
+### Sistema (c)
+
+$$
+\begin{cases}
+x + y = 3\\
+x - y = 1
+\end{cases}
+$$
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+1 & -1 & 1
+\end{array}
+\right]
+$$
+
+Paso 1:
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+0 & -2 & -2
+\end{array}
+\right]
+$$
+
+Normalizar:
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 1 & 3\\
+0 & 1 & 1
+\end{array}
+\right]
+$$
+
+Eliminar \(y\):
+
+$$
+\left[
+\begin{array}{cc|c}
+1 & 0 & 2\\
+0 & 1 & 1
+\end{array}
+\right]
+$$
+
+Solución:
+
+$$
+x=2,\quad y=1.
+$$
+
+---
+
+## Ejercicio 3. Sistema (4x4)
+
+Sistema:
+
+$$
+\begin{cases}
+x + y + z + w = 10\\
+2x + y - z + w = 5\\
+x - y + z - w = 1\\
+x + y - z + 2w = 8
+\end{cases}
+$$
+
+Matriz aumentada:
+
+$$
+\left[
+\begin{array}{cccc|c}
+1 & 1 & 1 & 1 & 10\\
+2 & 1 & -1 & 1 & 5\\
+1 & -1 & 1 & -1 & 1\\
+1 & 1 & -1 & 2 & 8
+\end{array}
+\right]
+$$
+
+Tras eliminación:
+
+$$
+\left[
+\begin{array}{cccc|c}
+1 & 1 & 1 & 1 & 10\\
+0 & 1 & 3 & 1 & 15\\
+0 & 0 & 1 & 0 & 7/2\\
+0 & 0 & 0 & 1 & 5
+\end{array}
+\right]
+$$
+
+Sustitución:
+
+$$
+w=5,\quad z=\frac{7}{2},\quad y=-\frac{1}{2},\quad x=2
+$$
+
+Solución:
+
+$$
+(x,y,z,w)=\left(2,-\frac{1}{2},\frac{7}{2},5\right)
+$$
+
+---
+Gracias a estos ejercicios he practicado y ahora se hacer mejor la resolucion de ejercicios con gauss o gauss jordan y tambien he mejorado mi practica con la plataforma github 
